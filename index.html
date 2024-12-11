@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DANNY JUICE </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+   
+     body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        
+    .header {
+            background-color: #fff;
+            border-bottom: 5px solid #ccc;
+            padding: 16px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+        }
+    
+         header .logo span {
+            color: green;
+        }
+    
+        .header nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .cart-icon {
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+        }
+    
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 32px 0;
+            background-color: #f3f4f6;
+        }
+        .hero img {
+            display: block;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
+        .hero button {
+            margin-top: 16px;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+          
+        .section {
+            padding: 32px 0;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .section p {
+            text-align: center;
+            margin-top: 16px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section button {
+            display: block;
+            margin: 16px auto;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+  
+        .grid {
+            display: grid;
+            gap: 16px;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+        }
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .promotion {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .promotion img {
+            width: 33%;
+            height: auto;
+        }
+        .promotion div {
+            margin-left: 16px;
+        }
+        .promotion h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .promotion p {
+            margin-top: 8px;
+        }
+        .promotion button {
+            margin-top: 8px;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+     
+        .feedback, .subscribe {
+            text-align: center;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feedback h3, .subscribe h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .feedback p, .subscribe p {
+            margin-top: 8px;
+        }
+        .subscribe form {
+            margin-top: 8px;
+        }
+        .subscribe input {
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .subscribe button {
+            margin-top: 8px;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    
+        .subscribe button:hover {
+           background-color: green;
+        }
+    
+        .promotion button:hover {
+            background-color: green;
+        }
+    
+        .section button:hover {
+            background-color: green;
+        }
+    
+        .hero button:hover {
+           background-color: green;
+        }
+    
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 32px 0;
+            margin-top: 32px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .footer .logo span {
+            color: green;
+        }
+    
+        .footer .social-icons a {
+            color: #fff;
+            margin-right: 8px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .header nav a:hover {
+            color: green;
+        }
+
+        .header nav a:visited {
+          color: black;
+        }
+        
+        .header nav a:active {
+          color: black;
+        }
+          
+        .footer .social-icons a:hover {
+            color: green;
+        }
+
+        .footer div p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+  </style>
+ </head>
+ 
+ <body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"><span>DANNY</span> JUICE</div>
+            <nav>
+                <a href="index.html">ABOUT</a>
+                <a href="about.html">MENU</a>
+                <a href="menu.html">SHOP</a>
+                <a href="promotions.html">DELIVERY</a>
+                <a href="event.html">EVENT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+
+  <section class="hero">
+   <img alt="Juice cartons" height="400" src="https://storage.googleapis.com/a1aa/image/avjeZ1L80EyTGy5MNowkF4hStB2JFGhRgfeWO2SffSQIHkMfE.jpg" width="600">
+   <h1> FRESH JUICE FRESH JUICE FRESH JUICE FRESH JUICE </h1>
+   <button> See more items </button>
+  </section>
+  
+  <section class="section">
+    <h2> About DANNY JUICE </h2>
+    <p> DANNY JUICE is my dream juice brand that I want to focus for my business in.the future.
+
+      I would focus on providing high-quality 100% fruit juice concentrates for all age groups </p>
+   <button> See more </button>
+   <div class="grid grid-2">
+    <img alt="Green fruit" height="200" src="https://storage.googleapis.com/a1aa/image/jhxvvJSN9dpQK1bS7tXPwZ5gWPP2ipwHLJl7MG8v8LOOIZeJA.jpg" width="300">
+    <img alt="Orange fruit" height="200" src="https://storage.googleapis.com/a1aa/image/hmbiIqxVgdbZMBvTZixcybSJdeRD8xIDnU3PJeRITNXAhk5TA.jpg" width="300">
+    <img alt="Red and blue fruits" height="200" src="https://storage.googleapis.com/a1aa/image/4VghaGhp0J6MGJq6AEKfAjet83cGVT700Teswazlx3ztBJznA.jpg" width="300">
+    <img alt="Yellow fruit" height="200" src="https://storage.googleapis.com/a1aa/image/OKS79X57dezoDyXml04FWnzjNqNlV7jeXRxPJwadGsJ0gk5TA.jpg" width="300">
+   </div>
+  </section>
+
+  <section class="section" style="background-color: #f3f4f6;">
+   <h2> MENUS </h2>
+   <div class="grid grid-4">
+    
+    <div class="text-center">
+     <img alt="Strawberry juice" height="300" src="https://storage.googleapis.com/a1aa/image/zjNP8JWZOF5PF55QXEwCyqlHLRSli51oaAxsMIkXYVhQIZeJA.jpg" width="200">
+     <p> Strawberry Juice </p>
+    </div>
+
+    <div class="text-center">
+     <img alt="Melon juice" height="300" src="https://storage.googleapis.com/a1aa/image/oFx5IMeTiCUheUbtYRFisT9vkmatayt4pfKYbVL6uWY2BJznA.jpg" width="200">
+     <p> Melon Juice </p>
+    </div>
+    
+    <div class="text-center">
+     <img alt="Orange juice" height="300" src="https://storage.googleapis.com/a1aa/image/YO0HYr0RnNoLGZK9sflHnmbe76Z0ZHxYOvLrZYpFA5meBJznA.jpg" width="200">
+     <p> Orange Juice </p>
+    </div>
+    
+    <div class="text-center">
+     <img alt="Placeholder juice" height="300" src="https://storage.googleapis.com/a1aa/image/2x2M3PWzKsrZGt7EK6qTAXptMEfRJwlp9tL0wJU2luvhQy8JA.jpg" width="200">
+     <p> Placeholder Juice </p>
+    </div>
+   </div>
+
+   <div class="text-center">
+    <button> Order </button>
+    </div>
+  </section>
+
+  <section class="section">
+   <h2> Promotions </h2>
+   <div class="grid grid-2">
+    
+    <div class="promotion" style="background-color: #fefcbf;">
+     <img alt="Orange juice bottle" height="150" src="https://storage.googleapis.com/a1aa/image/w7de1NbETzyCRiLD5swK0jfHeYDRV5RkWMlWgdffFgSsGkMfE.jpg" width="100">
+     <div>
+      <h3> BUY 1, GET 1 FREE! </h3>
+      <p> DANNY JUICE Orange juice (500ml) </p>
+      <button> Claim offer </button>
+     </div>
+    </div>
+
+    <div class="promotion" style="background-color: #f3f4f6;">
+     <img alt="Placeholder juice bottle" height="150" src="https://storage.googleapis.com/a1aa/image/FvKFDuoigYqxDpUWq95en71Eef0O1TEYrhvqV74brhH7BJznA.jpg" width="100">
+     <div>
+      <h3> SALE 30% discount </h3>
+      <p> DANNY JUICE Every juice (500 ml) </p>
+      <button> Claim offer </button>
+     </div>
+    </div>
+
+   </div>
+  </section>
+
+  <section class="section" style="background-color: #f3f4f6;">
+   <div class="grid grid-3">
+
+    <div class="feedback">
+     <h3> FEEDBACK </h3>
+     <p> "The juices are really fresh and the price is reasonable." </p>
+     <p> DANIEL Customer </p>
+    </div>
+
+    <div class="subscribe">
+     <h3> Subscribe our daily newsletter for update </h3>
+     <form>
+      <input placeholder="your email..." type="email">
+      <button> subscribe </button>
+     </form>
+    </div>
+
+    <div class="feedback">
+     <h3> FEEDBACK
+     </h3>
+     <p> "The delivery is really fast and the owner is really patient." </p>
+     <p> Alexa Customer </p>
+    </div>
+   </div>
+  </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <div class="logo"><span>DANNY</span> JUICE</div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <p><strong>VISIT</strong></p>
+                <p>280 Lester Street.</p>
+                <p>Building Sage 5</p> 
+                <p>N2L 0G2</p>
+            </div>
+            <div>
+                <p><strong>CONTACT</strong></p>
+                <p>Email: <a href="mailto:dmnaing@uwaterloo.ca">dmnaing@uwaterloo.ca</a></p>
+                <p>Phone: 705-507-7857</p>
+            </div>
+            <div>
+                <p><strong>PRIVACY</strong></p>
+                <p>Terms</p>
+                <p>Conditions</p>
+                <p>Services</p>
+            </div>
+        </div>
+    </footer>
+
+ </body>
+</html>
